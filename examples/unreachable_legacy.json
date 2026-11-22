@@ -1,0 +1,35 @@
+{
+  "schema": "sbmom/v1",
+  "description": "legacy-tool 0.9.0 is present in the inventory and in the baseline, but no root reaches it, so it must be neither audited nor counted as a removal nor changed by any solution. The only live component is app -> lib.",
+  "as_of": "2026-03-01",
+  "components": {
+    "app": {
+      "versions": {
+        "1.0.0": {
+          "regions": ["eu"],
+          "deps": [{"component": "lib", "min": "1.0.0", "max": "2.0.0"}]
+        }
+      }
+    },
+    "lib": {
+      "version_order": ["1.0.0", "2.0.0"],
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "cost": 3},
+        "2.0.0": {"regions": ["eu"], "cost": 1}
+      }
+    },
+    "legacy-tool": {
+      "versions": {
+        "0.9.0": {"regions": [], "requires_review": true, "cost": 500},
+        "1.0.0": {"regions": ["us"], "cost": 400}
+      },
+      "removal_cost": 250
+    }
+  },
+  "roots": {
+    "svc": {"component": "app", "region": "eu"}
+  },
+  "approvals": [],
+  "baseline": {"app": "1.0.0", "lib": "1.0.0", "legacy-tool": "0.9.0"},
+  "deployment": {"app": "1.0.0", "lib": "1.0.0", "legacy-tool": "0.9.0"}
+}

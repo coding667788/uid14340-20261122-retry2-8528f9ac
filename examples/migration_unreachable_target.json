@@ -1,0 +1,35 @@
+{
+  "schema": "sbmom/v1",
+  "description": "The legal final deployment {app:2.0.0, dep:2.0.0} exists, but no sequence of registered moves can reach it: only one direction is allowed and the single legal intermediate state is missing. This is the 'final legal but no legal path' case.",
+  "as_of": "2026-06-10",
+  "components": {
+    "app": {
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "deps": [{"component": "dep", "min": "1.0.0", "max": "1.0.0"}], "cost": 2},
+        "2.0.0": {"regions": ["eu"], "deps": [{"component": "dep", "min": "2.0.0", "max": "2.0.0"}], "cost": 2}
+      }
+    },
+    "dep": {
+      "version_order": ["1.0.0", "2.0.0"],
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "cost": 1},
+        "2.0.0": {"regions": ["eu"], "cost": 1}
+      }
+    }
+  },
+  "roots": {
+    "web": {"component": "app", "region": "eu", "halt_cost": 30}
+  },
+  "approvals": [],
+  "baseline": {"app": "1.0.0", "dep": "1.0.0"},
+  "deployment": {"app": "1.0.0", "dep": "1.0.0"},
+  "migration": {
+    "max_steps": 6,
+    "pause_limit": 0,
+    "edges": [
+      {"id": "app-up", "component": "app", "from": "1.0.0", "to": "2.0.0", "cost": 1}
+    ],
+    "groups": [],
+    "policies": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "sbmom/v1",
+  "description": "The cheapest single version (lib-core 3.0.0, cost 1) forces two dependent upgrades; the change-count objective must reject it in favour of lib-core 2.0.0 (cost 2, one change).",
+  "as_of": "2026-07-15",
+  "components": {
+    "app-a": {
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "deps": [{"component": "lib-core", "min": "1.0.0", "max": "2.0.0"}]},
+        "1.1.0": {"regions": ["eu"], "deps": [{"component": "lib-core", "min": "3.0.0", "max": "3.0.0"}], "cost": 5}
+      }
+    },
+    "app-b": {
+      "versions": {
+        "2.0.0": {"regions": ["eu"], "deps": [{"component": "lib-core", "min": "2.0.0", "max": "2.0.0"}]},
+        "3.0.0": {"regions": ["eu"], "deps": [{"component": "lib-core", "min": "3.0.0", "max": "3.0.0"}], "cost": 5}
+      }
+    },
+    "lib-core": {
+      "version_order": ["1.0.0", "1.5.0", "2.0.0", "3.0.0"],
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "cost": 10},
+        "1.5.0": {"regions": ["eu"], "cost": 1},
+        "2.0.0": {"regions": ["eu"], "cost": 2},
+        "3.0.0": {"regions": ["eu"], "cost": 1}
+      }
+    },
+    "legacy-tool": {
+      "versions": {
+        "0.9.0": {"regions": ["eu"], "deps": [{"component": "lib-core", "min": "1.0.0", "max": "1.5.0"}], "cost": 999}
+      }
+    }
+  },
+  "roots": {
+    "a": {"component": "app-a", "region": "eu"},
+    "b": {"component": "app-b", "region": "eu"}
+  },
+  "approvals": [],
+  "baseline": {
+    "app-a": "1.0.0",
+    "app-b": "2.0.0",
+    "lib-core": "1.0.0",
+    "legacy-tool": "0.9.0"
+  },
+  "deployment": {
+    "app-a": "1.0.0",
+    "app-b": "2.0.0",
+    "lib-core": "1.0.0",
+    "legacy-tool": "0.9.0"
+  }
+}

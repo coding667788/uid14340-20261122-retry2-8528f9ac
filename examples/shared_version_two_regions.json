@@ -1,0 +1,114 @@
+{
+  "schema": "sbmom/v1",
+  "description": "shared 1.0.0 requires independent review but has no approval, so the baseline is illegal. shared 2.0.0 also requires review and is approved in both eu and us, with one unexpired approval per region; the two roots in different regions share it, so it must carry both regions and both approvals. shared 3.0.0 is cheaper but only approved in eu, so the region rule forbids it for the us root.",
+  "as_of": "2026-07-01",
+  "components": {
+    "eu-app": {
+      "versions": {
+        "1.0.0": {
+          "regions": [
+            "eu"
+          ],
+          "deps": [
+            {
+              "component": "shared",
+              "min": "1.0.0",
+              "max": "3.0.0"
+            }
+          ]
+        }
+      }
+    },
+    "us-app": {
+      "versions": {
+        "1.0.0": {
+          "regions": [
+            "us"
+          ],
+          "deps": [
+            {
+              "component": "shared",
+              "min": "1.0.0",
+              "max": "3.0.0"
+            }
+          ]
+        }
+      }
+    },
+    "shared": {
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "regions": [
+            "eu",
+            "us"
+          ],
+          "requires_review": true,
+          "cost": 8
+        },
+        "2.0.0": {
+          "regions": [
+            "eu",
+            "us"
+          ],
+          "requires_review": true,
+          "cost": 2
+        },
+        "3.0.0": {
+          "regions": [
+            "eu"
+          ],
+          "requires_review": true,
+          "cost": 1
+        }
+      }
+    }
+  },
+  "roots": {
+    "eu": {
+      "component": "eu-app",
+      "region": "eu"
+    },
+    "us": {
+      "component": "us-app",
+      "region": "us"
+    }
+  },
+  "approvals": [
+    {
+      "id": "ap-eu",
+      "component": "shared",
+      "version": "2.0.0",
+      "region": "eu",
+      "expires": "2028-01-01"
+    },
+    {
+      "id": "ap-us",
+      "component": "shared",
+      "version": "2.0.0",
+      "region": "us",
+      "expires": "2028-01-01"
+    },
+    {
+      "id": "ap-eu-3",
+      "component": "shared",
+      "version": "3.0.0",
+      "region": "eu",
+      "expires": "2028-01-01"
+    }
+  ],
+  "baseline": {
+    "eu-app": "1.0.0",
+    "us-app": "1.0.0",
+    "shared": "1.0.0"
+  },
+  "deployment": {
+    "eu-app": "1.0.0",
+    "us-app": "1.0.0",
+    "shared": "1.0.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "sbmom/v1",
+  "description": "Each root is independently solvable, but no single http-lib version serves both.",
+  "as_of": "2026-06-01",
+  "components": {
+    "app-web": {
+      "versions": {
+        "1.0.0": {
+          "regions": ["eu"],
+          "deps": [{"component": "http-lib", "min": "1.0.0", "max": "1.9.9"}]
+        }
+      }
+    },
+    "app-batch": {
+      "versions": {
+        "1.0.0": {
+          "regions": ["us"],
+          "deps": [{"component": "http-lib", "min": "2.0.0", "max": "2.9.9"}]
+        }
+      }
+    },
+    "http-lib": {
+      "version_order": ["1.0.0", "1.9.9", "2.0.0", "2.9.9"],
+      "versions": {
+        "1.0.0": {"regions": ["eu", "us"], "cost": 10},
+        "1.9.9": {"regions": ["eu", "us"], "cost": 12},
+        "2.0.0": {"regions": ["eu", "us"], "cost": 20},
+        "2.9.9": {"regions": ["eu", "us"], "cost": 22}
+      }
+    }
+  },
+  "roots": {
+    "web": {"component": "app-web", "region": "eu"},
+    "batch": {"component": "app-batch", "region": "us"}
+  },
+  "approvals": [],
+  "baseline": {"app-web": "1.0.0", "app-batch": "1.0.0", "http-lib": "1.0.0"},
+  "deployment": {"app-web": "1.0.0", "app-batch": "1.0.0", "http-lib": "2.0.0"}
+}

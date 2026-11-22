@@ -1,0 +1,1586 @@
+{
+  "as_of": "2026-04-01",
+  "baseline": {
+    "aux": "1.0.0",
+    "gate": "1.0.0",
+    "p00": "1.0.0",
+    "p01": "1.0.0",
+    "p02": "1.0.0",
+    "p03": "1.0.0",
+    "p04": "1.0.0",
+    "p05": "1.0.0",
+    "p06": "1.0.0",
+    "p07": "1.0.0",
+    "p08": "1.0.0",
+    "p09": "1.0.0",
+    "p10": "1.0.0",
+    "p11": "1.0.0",
+    "p12": "1.0.0",
+    "p13": "1.0.0"
+  },
+  "capabilities": [
+    {
+      "id": "svc",
+      "roots": [
+        "eu",
+        "us"
+      ]
+    }
+  ],
+  "components": {
+    "aux": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "gate": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "regions": [
+            "eu"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p00",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p02",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p04",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p06",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p08",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p10",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p12",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p00",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p02",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p04",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p06",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p08",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p10",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p12",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p00": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p01",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p01",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p01",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p01": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p00",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            },
+            {
+              "component": "p03",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p00",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p03",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p00",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            },
+            {
+              "component": "p03",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p02": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p03",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p03",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p03",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p03": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p02",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            },
+            {
+              "component": "p05",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p02",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p05",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p02",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            },
+            {
+              "component": "p05",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p04": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p05",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p05",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p05",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p05": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p04",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            },
+            {
+              "component": "p07",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p04",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p07",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p04",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            },
+            {
+              "component": "p07",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p06": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p07",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p07",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p07",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p07": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p06",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            },
+            {
+              "component": "p09",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p06",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p09",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p06",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            },
+            {
+              "component": "p09",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p08": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p09",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p09",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p09",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p09": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p08",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            },
+            {
+              "component": "p11",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p08",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p11",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p08",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            },
+            {
+              "component": "p11",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p10": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p11",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p11",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p11",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p11": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p10",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            },
+            {
+              "component": "p13",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p10",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            },
+            {
+              "component": "p13",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p10",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            },
+            {
+              "component": "p13",
+              "max": "3.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p12": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p13",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p13",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p13",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    },
+    "p13": {
+      "removal_cost": 1,
+      "version_order": [
+        "1.0.0",
+        "2.0.0",
+        "3.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p12",
+              "max": "1.0.0",
+              "min": "1.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "2.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p12",
+              "max": "2.0.0",
+              "min": "2.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        },
+        "3.0.0": {
+          "cost": 1,
+          "deps": [
+            {
+              "component": "p12",
+              "max": "3.0.0",
+              "min": "3.0.0"
+            }
+          ],
+          "regions": [
+            "eu",
+            "us"
+          ]
+        }
+      }
+    }
+  },
+  "deployment": {
+    "aux": "1.0.0",
+    "gate": "1.0.0",
+    "p00": "1.0.0",
+    "p01": "1.0.0",
+    "p02": "1.0.0",
+    "p03": "1.0.0",
+    "p04": "1.0.0",
+    "p05": "1.0.0",
+    "p06": "1.0.0",
+    "p07": "1.0.0",
+    "p08": "1.0.0",
+    "p09": "1.0.0",
+    "p10": "1.0.0",
+    "p11": "1.0.0",
+    "p12": "1.0.0",
+    "p13": "1.0.0"
+  },
+  "description": "synthetic 16x3 plan case: pause-gated ordered upgrade with mutually pinned pairs",
+  "migration": {
+    "edges": [
+      {
+        "component": "p00",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p00-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p00",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p00-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p00",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p00-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p00",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p00-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p01",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p01-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p01",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p01-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p01",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p01-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p01",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p01-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p02",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p02-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p02",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p02-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p02",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p02-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p02",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p02-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p03",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p03-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p03",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p03-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p03",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p03-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p03",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p03-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p04",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p04-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p04",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p04-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p04",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p04-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p04",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p04-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p05",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p05-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p05",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p05-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p05",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p05-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p05",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p05-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p06",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p06-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p06",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p06-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p06",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p06-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p06",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p06-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p07",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p07-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p07",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p07-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p07",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p07-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p07",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p07-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p08",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p08-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p08",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p08-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p08",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p08-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p08",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p08-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p09",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p09-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p09",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p09-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p09",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p09-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p09",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p09-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p10",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p10-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p10",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p10-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p10",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p10-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p10",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p10-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p11",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p11-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p11",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p11-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p11",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p11-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p11",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p11-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p12",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p12-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p12",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p12-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p12",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p12-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p12",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p12-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p13",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "p13-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "p13",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p13-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "p13",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "p13-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "p13",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "p13-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "gate",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "gate-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "gate",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "gate-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "gate",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "gate-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "gate",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "gate-3.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "aux",
+        "cost": 1,
+        "from": "1.0.0",
+        "id": "aux-1.0.0-2.0.0",
+        "to": "2.0.0"
+      },
+      {
+        "component": "aux",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "aux-2.0.0-1.0.0",
+        "to": "1.0.0"
+      },
+      {
+        "component": "aux",
+        "cost": 1,
+        "from": "2.0.0",
+        "id": "aux-2.0.0-3.0.0",
+        "to": "3.0.0"
+      },
+      {
+        "component": "aux",
+        "cost": 1,
+        "from": "3.0.0",
+        "id": "aux-3.0.0-2.0.0",
+        "to": "2.0.0"
+      }
+    ],
+    "groups": [
+      {
+        "cost": 2,
+        "id": "batch-00",
+        "moves": [
+          {
+            "component": "p00",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          },
+          {
+            "component": "p01",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ]
+      },
+      {
+        "cost": 2,
+        "id": "batch-01",
+        "moves": [
+          {
+            "component": "p02",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          },
+          {
+            "component": "p03",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ]
+      },
+      {
+        "cost": 2,
+        "id": "batch-02",
+        "moves": [
+          {
+            "component": "p04",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          },
+          {
+            "component": "p05",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ]
+      },
+      {
+        "cost": 2,
+        "id": "batch-03",
+        "moves": [
+          {
+            "component": "p06",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          },
+          {
+            "component": "p07",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ]
+      },
+      {
+        "cost": 2,
+        "id": "batch-04",
+        "moves": [
+          {
+            "component": "p08",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          },
+          {
+            "component": "p09",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ]
+      },
+      {
+        "cost": 2,
+        "id": "batch-05",
+        "moves": [
+          {
+            "component": "p10",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          },
+          {
+            "component": "p11",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ]
+      },
+      {
+        "cost": 2,
+        "id": "batch-06",
+        "moves": [
+          {
+            "component": "p12",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          },
+          {
+            "component": "p13",
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ]
+      }
+    ],
+    "max_steps": 32,
+    "pause_limit": 1,
+    "policies": []
+  },
+  "roots": {
+    "eu": {
+      "component": "p00",
+      "halt_cost": 4,
+      "region": "eu"
+    },
+    "us": {
+      "component": "gate",
+      "halt_cost": 6,
+      "region": "us"
+    }
+  },
+  "schema": "sbmom/v1"
+}

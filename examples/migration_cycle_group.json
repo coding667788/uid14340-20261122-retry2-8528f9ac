@@ -1,0 +1,52 @@
+{
+  "schema": "sbmom/v1",
+  "description": "spine and hub form a 2-cycle pinned to equal majors. The baseline is illegal because app already wants the new cycle, yet moving either cycle member alone violates the other's interval. Only the registered atomic group can move both; app 2.0.0 has no downgrade edge.",
+  "as_of": "2026-09-01",
+  "components": {
+    "app": {
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "deps": [{"component": "spine", "min": "1.0.0", "max": "1.0.0"}], "cost": 3},
+        "2.0.0": {"regions": ["eu"], "deps": [{"component": "spine", "min": "2.0.0", "max": "2.0.0"}], "cost": 3}
+      }
+    },
+    "spine": {
+      "version_order": ["1.0.0", "2.0.0"],
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "deps": [{"component": "hub", "min": "1.0.0", "max": "1.0.0"}], "cost": 1},
+        "2.0.0": {"regions": ["eu"], "deps": [{"component": "hub", "min": "2.0.0", "max": "2.0.0"}], "cost": 1}
+      }
+    },
+    "hub": {
+      "version_order": ["1.0.0", "2.0.0"],
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "deps": [{"component": "spine", "min": "1.0.0", "max": "1.0.0"}], "cost": 1},
+        "2.0.0": {"regions": ["eu"], "deps": [{"component": "spine", "min": "2.0.0", "max": "2.0.0"}], "cost": 1}
+      }
+    }
+  },
+  "roots": {
+    "web": {"component": "app", "region": "eu", "halt_cost": 100}
+  },
+  "approvals": [],
+  "baseline": {"app": "2.0.0", "spine": "1.0.0", "hub": "1.0.0"},
+  "deployment": {"app": "2.0.0", "spine": "1.0.0", "hub": "1.0.0"},
+  "migration": {
+    "max_steps": 10,
+    "pause_limit": 0,
+    "edges": [
+      {"id": "spine-1-2", "component": "spine", "from": "1.0.0", "to": "2.0.0", "cost": 2},
+      {"id": "hub-1-2", "component": "hub", "from": "1.0.0", "to": "2.0.0", "cost": 2}
+    ],
+    "groups": [
+      {
+        "id": "cycle-atomic",
+        "moves": [
+          {"component": "spine", "from": "1.0.0", "to": "2.0.0"},
+          {"component": "hub", "from": "1.0.0", "to": "2.0.0"}
+        ],
+        "cost": 3
+      }
+    ],
+    "policies": []
+  }
+}

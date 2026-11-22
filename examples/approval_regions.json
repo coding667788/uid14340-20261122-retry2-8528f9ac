@@ -1,0 +1,56 @@
+{
+  "schema": "sbmom/v1",
+  "description": "Approval fixture. shared 2.0.0 requires independent review. Root 'eu' reaches it and has an unexpired eu approval; root 'us' reaches it too, and its us approval expired, so the deployment is illegal for root 'us' with APPROVAL_INVALID. 3.0.0 requires review and has no approval at all. legacy-1.0.0 is installed but reachable from no root, so it is inert and must not appear in any deployment nor trigger a rule.",
+  "as_of": "2026-06-30",
+  "components": {
+    "eu-app": {
+      "versions": {
+        "1.0.0": {
+          "regions": ["eu"],
+          "deps": [{"component": "shared", "min": "1.0.0", "max": "3.0.0"}]
+        }
+      }
+    },
+    "us-app": {
+      "versions": {
+        "1.0.0": {
+          "regions": ["us"],
+          "deps": [{"component": "shared", "min": "1.0.0", "max": "3.0.0"}]
+        }
+      }
+    },
+    "shared": {
+      "version_order": ["1.0.0", "2.0.0", "3.0.0"],
+      "versions": {
+        "1.0.0": {"regions": ["eu", "us"], "cost": 5},
+        "2.0.0": {"regions": ["eu", "us"], "requires_review": true, "cost": 2},
+        "3.0.0": {"regions": ["eu", "us"], "requires_review": true, "cost": 1}
+      }
+    },
+    "legacy": {
+      "versions": {
+        "1.0.0": {"regions": ["eu"], "requires_review": true, "cost": 500}
+      }
+    }
+  },
+  "roots": {
+    "eu": {"component": "eu-app", "region": "eu"},
+    "us": {"component": "us-app", "region": "us"}
+  },
+  "approvals": [
+    {"id": "ap-eu-2", "component": "shared", "version": "2.0.0", "region": "eu", "expires": "2027-01-01"},
+    {"id": "ap-us-2", "component": "shared", "version": "2.0.0", "region": "us", "expires": "2026-01-01"}
+  ],
+  "baseline": {
+    "eu-app": "1.0.0",
+    "us-app": "1.0.0",
+    "shared": "2.0.0",
+    "legacy": "1.0.0"
+  },
+  "deployment": {
+    "eu-app": "1.0.0",
+    "us-app": "1.0.0",
+    "shared": "2.0.0",
+    "legacy": "1.0.0"
+  }
+}

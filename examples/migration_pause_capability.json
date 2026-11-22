@@ -1,0 +1,50 @@
+{
+  "schema": "sbmom/v1",
+  "description": "app-a and lib-a pin each other's majors, so no single move is legal while root 'a' runs. There is no atomic group, so the only safe path is to pause root 'a', make both moves, then resume. Pausing is allowed because the critical capability 'serve' is also carried by root 'b', and pause_limit is 1 so both roots cannot be down at once.",
+  "as_of": "2026-10-01",
+  "components": {
+    "app-a": {
+      "versions": {
+        "1.0.0": {"regions": ["us"], "deps": [{"component": "lib-a", "min": "1.0.0", "max": "1.0.0"}], "cost": 5},
+        "2.0.0": {"regions": ["eu"], "deps": [{"component": "lib-a", "min": "2.0.0", "max": "2.0.0"}], "cost": 5}
+      }
+    },
+    "lib-a": {
+      "version_order": ["1.0.0", "2.0.0"],
+      "versions": {
+        "1.0.0": {"regions": ["eu", "us"], "cost": 4},
+        "2.0.0": {"regions": ["eu", "us"], "deps": [{"component": "app-a", "min": "2.0.0", "max": "2.0.0"}], "cost": 4}
+      }
+    },
+    "app-b": {
+      "versions": {
+        "1.0.0": {"regions": ["us"], "deps": [{"component": "lib-b", "min": "1.0.0", "max": "1.0.0"}], "cost": 2}
+      }
+    },
+    "lib-b": {
+      "versions": {
+        "1.0.0": {"regions": ["us"], "cost": 1}
+      }
+    }
+  },
+  "roots": {
+    "a": {"component": "app-a", "region": "eu", "halt_cost": 7},
+    "b": {"component": "app-b", "region": "us", "halt_cost": 5}
+  },
+  "approvals": [],
+  "capabilities": [
+    {"id": "serve", "roots": ["a", "b"]}
+  ],
+  "baseline": {"app-a": "1.0.0", "lib-a": "1.0.0", "app-b": "1.0.0", "lib-b": "1.0.0"},
+  "deployment": {"app-a": "1.0.0", "lib-a": "1.0.0", "app-b": "1.0.0", "lib-b": "1.0.0"},
+  "migration": {
+    "max_steps": 10,
+    "pause_limit": 1,
+    "edges": [
+      {"id": "a-app-up", "component": "app-a", "from": "1.0.0", "to": "2.0.0", "cost": 1},
+      {"id": "a-lib-up", "component": "lib-a", "from": "1.0.0", "to": "2.0.0", "cost": 1}
+    ],
+    "groups": [],
+    "policies": []
+  }
+}

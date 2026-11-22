@@ -1,0 +1,113 @@
+{
+  "schema": "sbmom/v1",
+  "description": "cycle-a and cycle-b constrain each other in both directions. Only (2,2) satisfies both edges at once: (1,1) fails a->b, (1,2) fails b->a, and (2,1) fails a->b. A validator that checks edges once without reaching a fixed point will wrongly accept (1,2) or (2,1).",
+  "as_of": "2026-05-20",
+  "components": {
+    "root-app": {
+      "versions": {
+        "1.0.0": {
+          "regions": [
+            "eu"
+          ],
+          "deps": [
+            {
+              "component": "cycle-a",
+              "min": "1.0.0",
+              "max": "2.0.0"
+            },
+            {
+              "component": "cycle-b",
+              "min": "1.0.0",
+              "max": "2.0.0"
+            }
+          ]
+        }
+      }
+    },
+    "cycle-a": {
+      "version_order": [
+        "1.0.0",
+        "2.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "regions": [
+            "eu"
+          ],
+          "deps": [
+            {
+              "component": "cycle-b",
+              "min": "2.0.0",
+              "max": "2.0.0"
+            }
+          ],
+          "cost": 1
+        },
+        "2.0.0": {
+          "regions": [
+            "eu"
+          ],
+          "deps": [
+            {
+              "component": "cycle-b",
+              "min": "2.0.0",
+              "max": "2.0.0"
+            }
+          ],
+          "cost": 1
+        }
+      }
+    },
+    "cycle-b": {
+      "version_order": [
+        "1.0.0",
+        "2.0.0"
+      ],
+      "versions": {
+        "1.0.0": {
+          "regions": [
+            "eu"
+          ],
+          "deps": [
+            {
+              "component": "cycle-a",
+              "min": "1.0.0",
+              "max": "1.0.0"
+            }
+          ],
+          "cost": 2
+        },
+        "2.0.0": {
+          "regions": [
+            "eu"
+          ],
+          "deps": [
+            {
+              "component": "cycle-a",
+              "min": "2.0.0",
+              "max": "2.0.0"
+            }
+          ],
+          "cost": 2
+        }
+      }
+    }
+  },
+  "roots": {
+    "svc": {
+      "component": "root-app",
+      "region": "eu"
+    }
+  },
+  "approvals": [],
+  "baseline": {
+    "root-app": "1.0.0",
+    "cycle-a": "1.0.0",
+    "cycle-b": "1.0.0"
+  },
+  "deployment": {
+    "root-app": "1.0.0",
+    "cycle-a": "1.0.0",
+    "cycle-b": "1.0.0"
+  }
+}
